@@ -1,0 +1,31 @@
+; This is the file you will use for the lab assignment
+; Make sure to comment your code properly and don't exceed 
+; the line limitation for this assignment.  Good luck!
+
+0011 0001 0000 0000 ; x3100 - starting address of the program
+
+; The program description and code starts here
+; Sree Akkina 11/08/2023
+
+; This code adds the positive numbers in the 
+; 10 memory addresses from x3132 to x313B.
+
+; R1 - stores the value in the memory R3 points to
+; R3 - value of current memory address
+; R4 - Counter which counts down from 10
+; R5 - Sum of all the positive values
+
+;start of the code
+1110 011 000110001   ; Initializing R3 to point the number in 
+                     ; the memory starting at x3132
+0101 100 100 1 00000 ; Initializing R4 to 0
+0001 100 100 1 01010 ; Initializing R4 (COUNTER) to 10
+0001 101 101 1 00000 ; Initializing R5 (SUM) to 0
+0110 001 011 000000  ; Loading in value of R3 to R1
+0000 100 000000001   ; Checking if value is negative
+0001 101 001 000 101 ; Adding R1 to R5
+0001 011 011 1 00001 ; Adding 1 to R3
+0001 100 100 1 11111 ; Adding -1 to counter R4
+0000 001 111111010   ; Looping back if counter is positive
+1111 0000 0010 0101  ; halt
+;end of the code

@@ -1,2 +1,1 @@
-# ECE120_FALL23
-These are the labs that I worked on throughout the ECE 120 course. 
+These are all the labs I have worked on in the ECE 120 course at the University of Urbana-Champaign.
